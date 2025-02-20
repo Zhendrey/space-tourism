@@ -7,9 +7,7 @@ import {
 const data = await getDestinationData();
 
 //DOM VARIABLES
-const destinationImage = document.querySelector(".destination__image");
-const destinationSource = destinationImage.querySelector("source");
-const destinationIMG = destinationImage.querySelector("img");
+const destinationImage = document.querySelector(".destination__image img");
 const destinationBody = document.querySelector(".destination__body");
 const destinationPlanets = destinationBody.querySelector(".destination__planets");
 const destinationPlanet = destinationBody.querySelectorAll(".destination__planet");
