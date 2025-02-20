@@ -1,0 +1,186 @@
+@use 'reset';
+
+.wrapper main.page {
+    margin-top: 11.5rem;
+    margin-bottom: 0;
+    &__destination {
+    }
+}
+.destination {
+
+    &__container{
+        padding: 0 0.9375rem;
+    }
+    
+    &__title {
+    }
+
+    &__image{
+        padding: 2.625rem 0;
+        @media (min-width: 48em) {
+            padding: 7.9375rem 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        @media (min-width: 48em) {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__body{
+        padding: 0.7188rem 0;
+        flex: 0 1 32.125rem;
+        @media (min-width: 48em) {
+            flex: 0 1 50%;
+            padding: 8.3125rem 2.9375rem;
+        }
+    }
+
+    &__planets {
+        display: flex;
+        column-gap: 2rem;
+        row-gap: 0.75rem;
+        margin-bottom: 1.6875rem; //40px - 13px = 27px
+    }
+
+    &__planet {
+        color: var(--blue-300);
+        @extend %text-8;
+        transition: all 0.5s ease 0s;
+        padding-bottom: 13px;
+        &.active{
+            border-bottom: 2px solid var(--white);
+            color: var(--white);
+        }
+        & button{
+            letter-spacing: 2px;
+        }
+        &:hover{
+            border-bottom: 2px solid var(--white);
+            color: var(--white);
+        }
+    }
+
+    &__planet-name {
+        @extend %text-2;
+        color: var(--white);
+        margin-bottom: 0.16em;
+        margin-left: -0.625rem;
+    }
+
+    &__text{
+        position: relative;
+        margin-bottom: 2.22222em;
+        padding-bottom: 2.27777778em; /* 41/18 */
+        text-align: center;
+        @media (min-width: 48em) {
+            text-align: left;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--white);
+            opacity: 0.25;
+        }
+    }
+
+    &__statistics {
+        display: flex;
+        column-gap: 5rem;
+        row-gap: 1rem;
+        align-self: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (min-width: 48em) {
+            flex-wrap: nowrap;
+            column-gap: 1.5rem;
+            justify-content: space-between;
+        }
+    }
+
+    [class*="__label"],
+    [class*="__number"]{
+        line-height: 1;
+    }
+
+    [class*="__label"]{
+        @extend %text-7;
+        margin-bottom: 0.75rem;
+    }
+
+    [class*="__number"]{
+        @extend %text-6;
+        color: var(--white);
+    }
+
+    &__distance {
+
+    }
+
+    &__travel-time {
+    }
+}
+.info {
+
+    &__image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 0.625rem;
+        @media (min-width: 48em) {
+            width: 100%;
+            height: 100%;
+        }
+        & img{
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 48em) {
+            align-items: flex-start;
+        }
+    }
+
+    &__text {
+        @extend %text-9;
+    }
+
+    
+}
+.distance {
+
+    &__label {
+    }
+
+    &__number {
+    }
+}
+.travel-time {
+
+    &__label {
+    }
+
+    &__number {
+    }
+}
