@@ -1,4 +1,45 @@
 @use 'reset';
+@use 'destination';
+@use 'crew';
+@use 'technology';
+
+%explore_after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 125%;
+    height: 125%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+%active_after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.wrapper > section{
+    display: none;
+    opacity: 0;
+    transition: 
+    display var(--transition-duration), 
+    opacity var(--transition-duration);
+    &.active{
+        display: block;
+        opacity: 1;
+        @starting-style{
+            opacity: 0;
+        }
+    }
+}
+// .removed{
+//     animation: vanish 0.5s ease normal forwards;
+// }
 
 .intro {
     padding-bottom: 8rem;
@@ -53,19 +94,12 @@
         &:hover{
             text-decoration: underline;
             &::after{
+                @extend %explore_after;
                 animation: appear 1s ease normal forwards;
             }
         }
         &::after{
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 125%;
-            height: 125%;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.4);
+            @extend %explore_after;
             animation: vanish 1s ease normal forwards;
         }
     }

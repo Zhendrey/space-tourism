@@ -1,10 +1,15 @@
-import { getData, modifyContent } from "./functions";
-
+import { 
+    getDestinationData, 
+    modifyContent, 
+    increaseOpacity
+    } from "./functions";
 //VARIABLES
-const data = await getData();
+const data = await getDestinationData();
 
 //DOM VARIABLES
-const destinationImage = document.querySelector(".destination__image img");
+const destinationImage = document.querySelector(".destination__image");
+const destinationSource = destinationImage.querySelector("source");
+const destinationIMG = destinationImage.querySelector("img");
 const destinationBody = document.querySelector(".destination__body");
 const destinationPlanets = destinationBody.querySelector(".destination__planets");
 const destinationPlanet = destinationBody.querySelectorAll(".destination__planet");
@@ -24,6 +29,11 @@ destinationPlanets.addEventListener("click", function(event){
         pressedPlanets.push(Number(targetId));
         const previousPlanet = pressedPlanets[pressedPlanets.length - 2];
         destinationPlanet[previousPlanet].classList.remove("active");
+        increaseOpacity(destinationImage.style);
+        increaseOpacity(destinationPlanetName.style);
+        increaseOpacity(destinationText.style);
+        increaseOpacity(distanceNumber.style);
+        increaseOpacity(travelNumber.style);
         targetElem.classList.toggle("active");
         modifyContent(
             data,

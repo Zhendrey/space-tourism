@@ -87,6 +87,46 @@
             transform: translateX(100%);
   }
 }
+@-webkit-keyframes move-top {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes move-top {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@-webkit-keyframes move-bottom {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+@keyframes move-bottom {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -205,6 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   --blue-900: #0b0d17;
   --blue-300: #d0d6f9;
   --white: #ffffff;
+  --transition-duration: 0.5s;
 }
 
 .destination__planet-name,
