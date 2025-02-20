@@ -1,9 +1,10 @@
 import { getCrewData } from './functions.js';
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 import { EffectFade, Pagination} from 'swiper/modules'
-import 'swiper/css';
+import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+
 
 const data = await getCrewData();
 
