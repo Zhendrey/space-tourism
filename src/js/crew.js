@@ -1,9 +1,9 @@
 import { getCrewData } from './functions.js';
-import Swiper from 'swiper/bundle';
-import { EffectFade, Pagination} from 'swiper/modules'
-import 'swiper/css/bundle';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
+// import Swiper from 'swiper/bundle';
+// import { EffectFade, Pagination} from 'swiper/modules'
+// import 'swiper/css/bundle';
+// import 'swiper/css/effect-fade';
+// import 'swiper/css/pagination';
 
 
 const data = await getCrewData();
@@ -28,7 +28,7 @@ data.forEach((crew, index) => {
 
 //crew swiper
 const swiperCrew = new Swiper('.swiper_crew', {
-    modules: [Pagination, EffectFade],
+    modules: [Swiper.Pagination, Swiper.EffectFade],
     direction: 'horizontal',
     loop: true,
     // autoHeight: true,
@@ -41,11 +41,11 @@ const swiperCrew = new Swiper('.swiper_crew', {
         type: "bullets",
         clickable: true,
     }
-})
+});
 
 //technology swiper
 const swiperTechnology = new Swiper('.swiper_technology', {
-    modules: [Pagination, EffectFade],
+    modules: [Swiper.Pagination, Swiper.EffectFade],
     direction: 'horizontal',
     loop: true,
     effect: 'fade',
