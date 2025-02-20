@@ -2,7 +2,7 @@ import {
     getDestinationData, 
     modifyContent, 
     increaseOpacity
-    } from "./functions";
+    } from "./functions.js";
 //VARIABLES
 const data = await getDestinationData();
 

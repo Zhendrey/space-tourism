@@ -1,4 +1,4 @@
-import { getTechnologyData, dynamicPading, dynamicTop } from "./functions";
+import { getTechnologyData, dynamicPading, dynamicTop } from "./functions.js";
 
 const data = await getTechnologyData();
 
