@@ -4,6 +4,7 @@ import { getCrewData } from './functions.js';
 // import 'swiper/css/bundle';
 // import 'swiper/css/effect-fade';
 // import 'swiper/css/pagination';
+import '../css/pagination.css';
 
 
 const data = await getCrewData();
