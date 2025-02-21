@@ -1,6 +1,7 @@
-import { getCrewData } from './functions';
-import Swiper from 'swiper';
-import { EffectFade, Pagination} from 'swiper/modules'
+import { getCrewData } from './functions.js';
+import { Swiper } from 'swiper';
+import { EffectFade } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
