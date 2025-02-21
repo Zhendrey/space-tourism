@@ -1,9 +1,9 @@
-import { getCrewData } from './functions.js';
+import { getCrewData } from './functions';
 import Swiper from 'swiper';
-import 'swiper/css/bundle';
+import { EffectFade, Pagination} from 'swiper/modules'
+import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import '../css/pagination.css';
 
 
 const data = await getCrewData();
@@ -28,7 +28,7 @@ data.forEach((crew, index) => {
 
 //crew swiper
 const swiperCrew = new Swiper('.swiper_crew', {
-    modules: [Swiper.Pagination, Swiper.EffectFade],
+    modules: [Pagination, EffectFade],
     direction: 'horizontal',
     loop: true,
     // autoHeight: true,
